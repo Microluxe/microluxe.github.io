@@ -12,6 +12,8 @@ Web bilingüe y responsive para Microluxe Studio, preparada para publicarse como
 - Listado interactivo de servicios, precios y duración.
 - Selección automática del servicio en el formulario.
 - Formulario de contacto y solicitud de cita dirigido a `neylec@gmail.com`.
+- Fecha adaptada al formato estadounidense `MM/DD/YYYY`.
+- Botón para añadir hasta cinco servicios en una misma solicitud.
 - Validación obligatoria de nombre, servicio y al menos un dato de contacto: correo o teléfono.
 - Enlaces alternativos de reserva mediante Booksy.
 
@@ -47,7 +49,8 @@ El formulario exige:
 
 - `index.html`: estructura de la página y formulario.
 - `assets/css/styles.css`: diseño responsive y animaciones.
-- `assets/js/main.js`: traducciones, catálogo, carrusel, visor y envío del formulario.
+- `assets/js/main.js`: traducciones, catálogo, carrusel, visor, fechas de EE. UU. y envío del formulario.
+- `assets/images/microluxe-logo.png`: logo PNG transparente utilizado en cabecera, hero y pie.
 - `.nojekyll`: evita que GitHub Pages procese innecesariamente los archivos con Jekyll.
 
 ## Recomendaciones

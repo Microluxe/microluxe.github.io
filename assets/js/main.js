@@ -85,7 +85,7 @@ const translations = {
     reviewOne: "“Knowledgeable and detail-oriented. She made sure I was happy with the results.”", reviewTwo: "“Beautiful and professional work, lovely and clean space.”", reviewThree: "“She is so sweet and explains everything. I will recommend her.”",
     contactEyebrow: "Contact & appointments", contactTitle: "Tell Neyle what you would like to book.", contactText: "Select a treatment and send your preferred date. Microluxe Studio will receive the request directly by email and contact you to confirm availability.", bookBooksy: "Or book directly through Booksy",
     locationLabel: "Location", emailLabel: "Email", bookingLabel: "Appointments", bookingText: "Requests are confirmed personally by the studio",
-    formKicker: "Appointment request", formName: "Name", formNamePlaceholder: "Your full name", formEmail: "Email", formEmailPlaceholder: "you@email.com", formPhone: "Phone", formPhonePlaceholder: "Phone or WhatsApp", formContactRequired: "Please enter at least an email address or a phone number.", formContactValidation: "Enter an email address or a phone number so Neyle can contact you.", formDate: "Preferred date", formService: "Service and price", formChooseService: "Choose a service", formContactMethod: "Preferred reply", formReplyEmail: "Email", formReplyPhone: "Phone / WhatsApp", formMessage: "Message", formMessagePlaceholder: "Tell us what result you are looking for or ask any question", formPrivacy: "Your information is used only to respond to this appointment request.", formSubmit: "Send request", formSending: "Sending…", formSuccess: "Thank you. Your request has been sent to Neyle.", formError: "The message could not be sent. Please try again or email neylec@gmail.com.", selectService: "Select service"
+    formKicker: "Appointment request", formName: "Name", formNamePlaceholder: "Your full name", formEmail: "Email", formEmailPlaceholder: "you@email.com", formPhone: "Phone", formPhonePlaceholder: "Phone or WhatsApp", formContactRequired: "Please enter at least an email address or a phone number.", formContactValidation: "Enter an email address or a phone number so Neyle can contact you.", formDate: "Preferred date", formDatePlaceholder: "MM/DD/YYYY", formDateValidation: "Enter a valid date in MM/DD/YYYY format.", formService: "Services and prices", formChooseService: "Choose a service", formAddService: "Add another service", formRemoveService: "Remove service", formServiceLimit: "You can add up to five services.", formContactMethod: "Preferred reply", formReplyEmail: "Email", formReplyPhone: "Phone / WhatsApp", formMessage: "Message", formMessagePlaceholder: "Tell us what result you are looking for or ask any question", formPrivacy: "Your information is used only to respond to this appointment request.", formSubmit: "Send request", formSending: "Sending…", formSuccess: "Thank you. Your request has been sent to Neyle.", formError: "The message could not be sent. Please try again or email neylec@gmail.com.", selectService: "Select service"
   },
   es: {
     navServices: "Servicios", navWork: "Trabajos", navTraining: "Formación", navReviews: "Opiniones", navContact: "Contacto",
@@ -113,7 +113,7 @@ const translations = {
     reviewOne: "“Tiene mucho conocimiento y cuida cada detalle. Se aseguró de que estuviera satisfecha con el resultado.”", reviewTwo: "“Trabajo precioso y profesional, en un espacio agradable y limpio.”", reviewThree: "“Es muy amable y lo explica todo. La recomendaría.”",
     contactEyebrow: "Contacto y citas", contactTitle: "Cuéntale a Neyle qué quieres reservar.", contactText: "Selecciona un tratamiento y envía tu fecha preferida. Microluxe Studio recibirá la solicitud directamente por correo y contactará contigo para confirmar disponibilidad.", bookBooksy: "O reserva directamente en Booksy",
     locationLabel: "Ubicación", emailLabel: "Correo", bookingLabel: "Citas", bookingText: "Las solicitudes se confirman personalmente desde el estudio",
-    formKicker: "Solicitud de cita", formName: "Nombre", formNamePlaceholder: "Nombre y apellidos", formEmail: "Correo", formEmailPlaceholder: "tu@email.com", formPhone: "Teléfono", formPhonePlaceholder: "Teléfono o WhatsApp", formContactRequired: "Introduce al menos un correo electrónico o un teléfono.", formContactValidation: "Introduce un correo o un teléfono para que Neyle pueda contactarte.", formDate: "Fecha preferida", formService: "Servicio y precio", formChooseService: "Elige un servicio", formContactMethod: "Respuesta preferida", formReplyEmail: "Correo", formReplyPhone: "Teléfono / WhatsApp", formMessage: "Mensaje", formMessagePlaceholder: "Cuéntanos qué resultado buscas o haz cualquier consulta", formPrivacy: "Tus datos solo se utilizarán para responder a esta solicitud de cita.", formSubmit: "Enviar solicitud", formSending: "Enviando…", formSuccess: "Gracias. Tu solicitud ha sido enviada a Neyle.", formError: "No se pudo enviar el mensaje. Inténtalo de nuevo o escribe a neylec@gmail.com.", selectService: "Seleccionar servicio"
+    formKicker: "Solicitud de cita", formName: "Nombre", formNamePlaceholder: "Nombre y apellidos", formEmail: "Correo", formEmailPlaceholder: "tu@email.com", formPhone: "Teléfono", formPhonePlaceholder: "Teléfono o WhatsApp", formContactRequired: "Introduce al menos un correo electrónico o un teléfono.", formContactValidation: "Introduce un correo o un teléfono para que Neyle pueda contactarte.", formDate: "Fecha preferida", formDatePlaceholder: "MM/DD/AAAA", formDateValidation: "Introduce una fecha válida en formato MM/DD/AAAA.", formService: "Servicios y precios", formChooseService: "Elige un servicio", formAddService: "Agregar otro servicio", formRemoveService: "Eliminar servicio", formServiceLimit: "Puedes agregar hasta cinco servicios.", formContactMethod: "Respuesta preferida", formReplyEmail: "Correo", formReplyPhone: "Teléfono / WhatsApp", formMessage: "Mensaje", formMessagePlaceholder: "Cuéntanos qué resultado buscas o haz cualquier consulta", formPrivacy: "Tus datos solo se utilizarán para responder a esta solicitud de cita.", formSubmit: "Enviar solicitud", formSending: "Enviando…", formSuccess: "Gracias. Tu solicitud ha sido enviada a Neyle.", formError: "No se pudo enviar el mensaje. Inténtalo de nuevo o escribe a neylec@gmail.com.", selectService: "Seleccionar servicio"
   }
 };
 
@@ -154,11 +154,16 @@ function renderServices(category) {
   });
 }
 
-function renderServiceOptions(selectedValue = "") {
-  const select = document.getElementById("service-select");
-  if (!select) return;
+const MAX_SERVICES = 5;
 
+function getSelectedServiceValues() {
+  return [...document.querySelectorAll(".service-select")].map(select => select.value);
+}
+
+function buildServiceOptions(select, selectedValue = "") {
+  if (!select) return;
   select.innerHTML = `<option value="">${translations[currentLanguage].formChooseService}</option>`;
+
   Object.values(services).forEach(category => {
     const group = document.createElement("optgroup");
     group.label = category[currentLanguage];
@@ -171,28 +176,101 @@ function renderServiceOptions(selectedValue = "") {
     select.appendChild(group);
   });
 
-  trainings.forEach((training, index) => {
-    if (index === 0) {
-      const group = document.createElement("optgroup");
-      group.label = currentLanguage === "es" ? "Formación profesional" : "Professional training";
-      trainings.forEach(item => {
-        const option = document.createElement("option");
-        option.value = `${item.en} — ${item.meta}`;
-        option.textContent = `${item[currentLanguage]} — ${item.meta}`;
-        group.appendChild(option);
-      });
-      select.appendChild(group);
-    }
+  const trainingGroup = document.createElement("optgroup");
+  trainingGroup.label = currentLanguage === "es" ? "Formación profesional" : "Professional training";
+  trainings.forEach(item => {
+    const option = document.createElement("option");
+    option.value = `${item.en} — ${item.meta}`;
+    option.textContent = `${item[currentLanguage]} — ${item.meta}`;
+    trainingGroup.appendChild(option);
   });
+  select.appendChild(trainingGroup);
 
   if (selectedValue) select.value = selectedValue;
 }
 
+function refreshServiceFieldNames() {
+  document.querySelectorAll(".service-select-row").forEach((row, index) => {
+    const select = row.querySelector(".service-select");
+    const removeButton = row.querySelector(".remove-service-button");
+    if (select) {
+      select.name = `Service ${index + 1}`;
+      select.id = index === 0 ? "service-select" : `service-select-${index + 1}`;
+      select.setAttribute("aria-label", index === 0 ? "Primary service" : `Additional service ${index}`);
+    }
+    if (removeButton) removeButton.setAttribute("aria-label", translations[currentLanguage].formRemoveService);
+  });
+}
+
+function updateAddServiceUI() {
+  const rows = document.querySelectorAll(".service-select-row");
+  const addButton = document.getElementById("add-service-button");
+  const note = document.getElementById("service-limit-note");
+  const atLimit = rows.length >= MAX_SERVICES;
+  if (addButton) addButton.disabled = atLimit;
+  if (note) note.hidden = !atLimit;
+}
+
+function addServiceField(selectedValue = "", focus = false) {
+  const fields = document.getElementById("service-fields");
+  if (!fields || fields.children.length >= MAX_SERVICES) {
+    updateAddServiceUI();
+    return null;
+  }
+
+  const row = document.createElement("div");
+  row.className = "service-select-row";
+
+  const select = document.createElement("select");
+  select.className = "service-select";
+
+  const removeButton = document.createElement("button");
+  removeButton.className = "remove-service-button";
+  removeButton.type = "button";
+  removeButton.innerHTML = "×";
+  removeButton.setAttribute("aria-label", translations[currentLanguage].formRemoveService);
+  removeButton.addEventListener("click", () => {
+    row.remove();
+    refreshServiceFieldNames();
+    updateAddServiceUI();
+  });
+
+  row.append(select, removeButton);
+  fields.appendChild(row);
+  buildServiceOptions(select, selectedValue);
+  refreshServiceFieldNames();
+  updateAddServiceUI();
+  if (focus) select.focus({ preventScroll: true });
+  return select;
+}
+
+function resetServiceFields() {
+  const fields = document.getElementById("service-fields");
+  if (!fields) return;
+  [...fields.querySelectorAll(".service-select-row")].slice(1).forEach(row => row.remove());
+  const first = fields.querySelector(".service-select");
+  if (first) first.value = "";
+  refreshServiceFieldNames();
+  updateAddServiceUI();
+}
+
+function renderServiceOptions(selectedValues = null) {
+  const selects = [...document.querySelectorAll(".service-select")];
+  if (!selects.length) return;
+  const values = Array.isArray(selectedValues) ? selectedValues : selects.map(select => select.value);
+  selects.forEach((select, index) => buildServiceOptions(select, values[index] || ""));
+  refreshServiceFieldNames();
+  updateAddServiceUI();
+}
+
 function selectServiceAndOpenForm(serviceValue) {
-  renderServiceOptions(serviceValue);
+  let target = [...document.querySelectorAll(".service-select")].find(select => !select.value);
+  if (!target) target = addServiceField(serviceValue);
+  if (target && target.value !== serviceValue) target.value = serviceValue;
+
   const form = document.getElementById("contact-form");
   form?.scrollIntoView({ behavior: "smooth", block: "center" });
-  window.setTimeout(() => document.getElementById("service-select")?.focus({ preventScroll: true }), 550);
+  window.setTimeout(() => target?.focus({ preventScroll: true }), 550);
 }
 
 function renderTraining() {
@@ -227,10 +305,11 @@ function applyLanguage(language) {
   const languageToggle = document.querySelector(".language-toggle");
   if (languageToggle) languageToggle.textContent = language === "en" ? "EN / ES" : "ES / EN";
 
-  const selectedService = document.getElementById("service-select")?.value || "";
+  const selectedServices = getSelectedServiceValues();
   renderServices(currentCategory);
   renderTraining();
-  renderServiceOptions(selectedService);
+  renderServiceOptions(selectedServices);
+  validateUSDate(false);
   updateLightboxContent(lightboxIndex);
 }
 
@@ -269,6 +348,80 @@ function initReveal() {
   }, { threshold: .12 });
 
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+}
+
+function initRemoteImages() {
+  document.querySelectorAll(".hero-photo, .carousel-image-button img").forEach(image => {
+    const button = image.closest(".carousel-image-button");
+    if (button) button.classList.add("is-loading");
+
+    const markLoaded = () => {
+      button?.classList.remove("is-loading", "image-load-error");
+      const slide = image.closest(".carousel-slide");
+      if (slide) slide.style.setProperty("--slide-image", `url("${image.currentSrc || image.src}")`);
+    };
+
+    const markError = () => {
+      const fallback = image.dataset.fallbackSrc;
+      if (fallback && image.dataset.fallbackTried !== "true") {
+        image.dataset.fallbackTried = "true";
+        image.src = fallback;
+        return;
+      }
+      button?.classList.remove("is-loading");
+      button?.classList.add("image-load-error");
+      image.classList.add("image-load-error");
+    };
+
+    image.addEventListener("load", markLoaded);
+    image.addEventListener("error", markError);
+    if (image.complete) {
+      if (image.naturalWidth > 0) markLoaded();
+      else markError();
+    }
+  });
+}
+
+function formatUSDateInput(value) {
+  const digits = value.replace(/\D/g, "").slice(0, 8);
+  const parts = [];
+  if (digits.length) parts.push(digits.slice(0, 2));
+  if (digits.length > 2) parts.push(digits.slice(2, 4));
+  if (digits.length > 4) parts.push(digits.slice(4, 8));
+  return parts.join("/");
+}
+
+function isValidUSDate(value) {
+  if (!value) return true;
+  const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
+  if (!match) return false;
+  const month = Number(match[1]);
+  const day = Number(match[2]);
+  const year = Number(match[3]);
+  const date = new Date(year, month - 1, day);
+  return year >= 2024 && month >= 1 && month <= 12 && day >= 1 &&
+    date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
+}
+
+function validateUSDate(showMessage = true) {
+  const input = document.getElementById("preferred-date");
+  if (!input) return true;
+  const valid = isValidUSDate(input.value.trim());
+  input.setCustomValidity(valid ? "" : translations[currentLanguage].formDateValidation);
+  if (showMessage && !valid) input.reportValidity();
+  return valid;
+}
+
+function initUSDateInput() {
+  const input = document.getElementById("preferred-date");
+  if (!input) return;
+  input.addEventListener("input", () => {
+    const cursorAtEnd = input.selectionStart === input.value.length;
+    input.value = formatUSDateInput(input.value);
+    if (cursorAtEnd) input.setSelectionRange(input.value.length, input.value.length);
+    validateUSDate(false);
+  });
+  input.addEventListener("blur", () => validateUSDate(true));
 }
 
 function initCarousel() {
@@ -421,7 +574,10 @@ function initContactForm() {
   const submitButton = form?.querySelector('button[type="submit"]');
   const emailInput = document.getElementById("contact-email");
   const phoneInput = document.getElementById("contact-phone");
+  const addServiceButton = document.getElementById("add-service-button");
   if (!form || !status || !submitButton || !emailInput || !phoneInput) return;
+
+  addServiceButton?.addEventListener("click", () => addServiceField("", true));
 
   const validateContactFields = () => {
     const hasEmail = emailInput.value.trim() !== "";
@@ -443,6 +599,7 @@ function initContactForm() {
   form.addEventListener("submit", async event => {
     event.preventDefault();
     validateContactFields();
+    validateUSDate(false);
     if (!form.reportValidity()) return;
 
     const originalText = translations[currentLanguage].formSubmit;
@@ -463,11 +620,13 @@ function initContactForm() {
       status.className = "form-status is-visible is-success";
       status.textContent = translations[currentLanguage].formSuccess;
       form.reset();
+      resetServiceFields();
       emailInput.setCustomValidity("");
       phoneInput.setCustomValidity("");
       emailInput.removeAttribute("aria-invalid");
       phoneInput.removeAttribute("aria-invalid");
       renderServiceOptions();
+      validateUSDate(false);
     } catch (error) {
       console.error(error);
       status.className = "form-status is-visible is-error";
@@ -496,6 +655,8 @@ renderServiceOptions();
 applyLanguage(currentLanguage);
 initNavigation();
 initReveal();
+initUSDateInput();
+initRemoteImages();
 initCarousel();
 initLightbox();
 initContactForm();
