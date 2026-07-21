@@ -2,10 +2,6 @@
 
 <html data-theme="luxe" lang="en">
 <head>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-<link rel="icon" href="assets/images/favicon.ico">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Microluxe Studio | Brows, Lashes &amp; Permanent Makeup in Kissimmee</title>
@@ -298,12 +294,18 @@
 <span data-i18n="formDate">Preferred date</span>
 <input id="preferred-date" inputmode="numeric" maxlength="10" name="Preferred date" placeholder="MM/DD/YYYY" autocomplete="off" type="text" aria-label="Preferred date in MM/DD/YYYY format"/>
 </label>
-<label class="form-field form-field-wide">
-<span data-i18n="formService">Service and price</span>
-<select id="service-select" name="Service and price" required="">
+<div class="form-field form-field-wide">
+<span data-i18n="formService">Services and prices</span>
+<div class="service-fields" id="service-fields">
+<div class="service-select-row">
+<select class="service-select" id="service-select" name="Service 1" required aria-label="Primary service">
 <option data-i18n="formChooseService" value="">Choose a service</option>
 </select>
-</label>
+</div>
+</div>
+<button class="add-service-button" id="add-service-button" type="button" data-i18n="formAddService">+ Add another service</button>
+<p class="service-limit-note" id="service-limit-note" hidden data-i18n="formServiceLimit">You can add up to five services.</p>
+</div>
 <label class="form-field">
 <span data-i18n="formContactMethod">Preferred reply</span>
 <select name="Preferred reply">
