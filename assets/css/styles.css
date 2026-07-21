@@ -1681,3 +1681,91 @@ h3 { font-size: clamp(1.75rem, 2.65vw, 2.85rem); line-height: 1.03; }
     padding: .48rem .48rem .75rem;
   }
 }
+
+/* Mobile review carousel usability fix */
+@media (max-width: 680px) {
+  .review-carousel {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    column-gap: .65rem;
+    row-gap: .85rem;
+    align-items: center;
+  }
+
+  .review-viewport {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .review-slide {
+    padding: .6rem;
+  }
+
+  .review-card {
+    min-height: 0;
+    padding: 1.3rem 1.15rem 1.45rem;
+  }
+
+  .review-card-top {
+    margin-bottom: 1.15rem;
+  }
+
+  .review-stars {
+    font-size: .8rem;
+    letter-spacing: .11em;
+  }
+
+  .review-badge {
+    max-width: 118px;
+    font-size: .58rem;
+    line-height: 1.3;
+  }
+
+  .review-card > p {
+    max-width: none;
+    font-size: clamp(1.02rem, 4.8vw, 1.28rem);
+    line-height: 1.34;
+    letter-spacing: -.006em;
+  }
+
+  .review-card footer {
+    gap: .55rem;
+    margin-top: 1.35rem;
+    font-size: .69rem;
+    line-height: 1.4;
+  }
+
+  .review-card footer strong {
+    font-size: .77rem;
+  }
+
+  .review-control {
+    position: static;
+    top: auto;
+    width: 42px;
+    height: 42px;
+    transform: none;
+  }
+
+  .review-control:hover {
+    transform: none;
+  }
+
+  .review-prev {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .review-next {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .review-carousel-meta {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    padding-top: .2rem;
+  }
+}
