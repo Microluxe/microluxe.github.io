@@ -365,7 +365,7 @@ function initReveal() {
 }
 
 function initRemoteImages() {
-  document.querySelectorAll(".hero-photo, .carousel-image-button img").forEach(image => {
+  document.querySelectorAll(".carousel-image-button img").forEach(image => {
     const button = image.closest(".carousel-image-button");
     if (button) button.classList.add("is-loading");
 
@@ -496,7 +496,11 @@ async function loadPortfolio() {
     const response = await fetch(`assets/data/portfolio.json?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`Portfolio request failed: ${response.status}`);
     const data = await response.json();
-    const images = Array.isArray(data.images) ? data.images.filter(item => item && (item.src || item.source_url)) : [];
+    const images = Array.isArray(data.images) ? data.images.filter(item => {
+      if (!item || !(item.src || item.source_url)) return false;
+      const source = `${item.src || ""} ${item.source_url || ""} ${item.fallback_src || ""}`.toLowerCase();
+      return !source.includes("/biz_photo/") && !source.includes("microluxe-logo");
+    }) : [];
     if (!images.length) throw new Error("Portfolio data is empty");
     renderPortfolio(images);
     if (note) {
@@ -677,6 +681,54 @@ function initHeroShowcase() {
   const backdrop = showcase?.querySelector(".hero-photo-backdrop");
   if (!showcase || !slides.length || !dotsContainer) return;
 
+  window.clearInterval(heroTimer);
+  heroIndex = Math.min(heroIndex, slides.length - 1);
+  dotsContainer.innerHTML = "";
+
+  function findAvailableIndex(startIndex, direction = 1) {
+    for (let offset = 0; offset < slides.length; offset += 1) {
+      const index = (startIndex + offset * direction + slides.length) % slides.length;
+      if (!slides[index].classList.contains("image-load-error")) return index;
+    }
+    return 0;
+  }
+
+  function updateHero() {
+    heroIndex = findAvailableIndex(heroIndex, 1);
+    const activeImage = slides[heroIndex];
+    slides.forEach((image, index) => {
+      const active = index === heroIndex;
+      image.classList.toggle("is-active", active);
+      image.setAttribute("aria-hidden", String(!active));
+    });
+    dotsContainer.querySelectorAll(".hero-photo-dot").forEach((dot, index) => {
+      const active = index === heroIndex;
+      dot.classList.toggle("is-active", active);
+      dot.setAttribute("aria-current", active ? "true" : "false");
+      dot.disabled = slides[index].classList.contains("image-load-error");
+    });
+    if (backdrop && activeImage) {
+      backdrop.style.backgroundImage = `url("${activeImage.currentSrc || activeImage.src}")`;
+    }
+  }
+
+  function go(direction) {
+    heroIndex = findAvailableIndex((heroIndex + direction + slides.length) % slides.length, direction >= 0 ? 1 : -1);
+    updateHero();
+  }
+
+  function startHero() {
+    window.clearInterval(heroTimer);
+    if (slides.filter(image => !image.classList.contains("image-load-error")).length > 1) {
+      heroTimer = window.setInterval(() => go(1), 4300);
+    }
+  }
+
+  function restartHero() {
+    window.clearInterval(heroTimer);
+    startHero();
+  }
+
   slides.forEach((image, index) => {
     const dot = document.createElement("button");
     dot.type = "button";
@@ -689,57 +741,63 @@ function initHeroShowcase() {
     });
     dotsContainer.appendChild(dot);
 
-    image.addEventListener("error", () => image.classList.add("image-load-error"));
+    const markLoaded = () => {
+      image.classList.remove("image-load-error");
+      if (index === heroIndex) updateHero();
+    };
+
+    const markError = () => {
+      const fallback = image.dataset.fallbackSrc;
+      if (fallback && image.dataset.fallbackTried !== "true" && image.src !== fallback) {
+        image.dataset.fallbackTried = "true";
+        image.src = fallback;
+        return;
+      }
+      image.classList.add("image-load-error");
+      if (index === heroIndex) go(1);
+    };
+
+    image.addEventListener("load", markLoaded);
+    image.addEventListener("error", markError);
+    if (image.complete) {
+      if (image.naturalWidth > 0) markLoaded();
+      else markError();
+    }
   });
 
-  function updateHero() {
-    const availableSlides = slides.filter(image => !image.classList.contains("image-load-error"));
-    if (!availableSlides.length) return;
-    const activeImage = slides[heroIndex];
-    if (activeImage?.classList.contains("image-load-error")) {
-      heroIndex = (heroIndex + 1) % slides.length;
-      return updateHero();
-    }
-    slides.forEach((image, index) => {
-      image.classList.toggle("is-active", index === heroIndex);
-      image.setAttribute("aria-hidden", String(index !== heroIndex));
-    });
-    dotsContainer.querySelectorAll(".hero-photo-dot").forEach((dot, index) => {
-      dot.classList.toggle("is-active", index === heroIndex);
-      dot.setAttribute("aria-current", index === heroIndex ? "true" : "false");
-    });
-    if (backdrop) backdrop.style.backgroundImage = `url("${activeImage.currentSrc || activeImage.src}")`;
-  }
+  showcase.querySelector(".hero-photo-prev")?.addEventListener("click", () => {
+    go(-1);
+    restartHero();
+  });
+  showcase.querySelector(".hero-photo-next")?.addEventListener("click", () => {
+    go(1);
+    restartHero();
+  });
 
-  function go(direction) {
-    heroIndex = (heroIndex + direction + slides.length) % slides.length;
-    updateHero();
-  }
-  function startHero() {
-    window.clearInterval(heroTimer);
-    heroTimer = window.setInterval(() => go(1), 4300);
-  }
-  function stopHero() { window.clearInterval(heroTimer); }
-  function restartHero() { stopHero(); startHero(); }
-
-  showcase.querySelector(".hero-photo-prev")?.addEventListener("click", () => { go(-1); restartHero(); });
-  showcase.querySelector(".hero-photo-next")?.addEventListener("click", () => { go(1); restartHero(); });
-  showcase.addEventListener("pointerenter", stopHero);
-  showcase.addEventListener("pointerleave", startHero);
-  showcase.addEventListener("focusin", stopHero);
+  // Keep autoplay active on hover so the carousel never appears frozen on arrival.
+  showcase.addEventListener("focusin", () => window.clearInterval(heroTimer));
   showcase.addEventListener("focusout", startHero);
 
   let touchStartX = 0;
-  showcase.addEventListener("touchstart", event => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+  showcase.addEventListener("touchstart", event => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
   showcase.addEventListener("touchend", event => {
     const distance = event.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(distance) > 42) { go(distance > 0 ? -1 : 1); restartHero(); }
+    if (Math.abs(distance) > 42) {
+      go(distance > 0 ? -1 : 1);
+      restartHero();
+    }
   }, { passive: true });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) window.clearInterval(heroTimer);
+    else startHero();
+  });
 
   updateHero();
   startHero();
 }
-
 function formatReviewDate(value) {
   if (!value) return "";
   const date = new Date(`${String(value).slice(0, 10)}T12:00:00`);
