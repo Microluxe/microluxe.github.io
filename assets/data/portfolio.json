@@ -1,0 +1,89 @@
+{
+  "expected_count": 18,
+  "count": 8,
+  "synced_at": null,
+  "source": "https://booksy.com/en-us/1311898_microluxe-studio_brows-lashes_134766_kissimmee",
+  "note": "Fallback set. GitHub Actions replaces this with all 18 Booksy Portfolio photos after upload.",
+  "images": [
+    {
+      "id": "portfolio-01",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/biz_photo/b9a9c2e81b114125b938d07b44d551-microluxe-studio-biz-photo-24990e59486c4ce48433cf9dc6b736-booksy.jpeg",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/biz_photo/b9a9c2e81b114125b938d07b44d551-microluxe-studio-biz-photo-24990e59486c4ce48433cf9dc6b736-booksy.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/biz_photo/b9a9c2e81b114125b938d07b44d551-microluxe-studio-biz-photo-24990e59486c4ce48433cf9dc6b736-booksy.jpeg",
+      "alt_en": "Microluxe Studio portfolio image",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 1",
+      "caption_en": "Inside Microluxe Studio",
+      "caption_es": "Portfolio Microluxe Studio · 01"
+    },
+    {
+      "id": "portfolio-02",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg",
+      "alt_en": "Microluxe Studio signature beauty result",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 2",
+      "caption_en": "Signature beauty result",
+      "caption_es": "Portfolio Microluxe Studio · 02"
+    },
+    {
+      "id": "portfolio-03",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg",
+      "alt_en": "Natural beauty result by Microluxe Studio",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 3",
+      "caption_en": "Tailored brow definition",
+      "caption_es": "Portfolio Microluxe Studio · 03"
+    },
+    {
+      "id": "portfolio-04",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg",
+      "alt_en": "Beauty styling result by Microluxe Studio",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 4",
+      "caption_en": "Balanced shape and tone",
+      "caption_es": "Portfolio Microluxe Studio · 04"
+    },
+    {
+      "id": "portfolio-05",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg",
+      "alt_en": "Permanent makeup result by Microluxe Studio",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 5",
+      "caption_en": "Soft permanent makeup",
+      "caption_es": "Portfolio Microluxe Studio · 05"
+    },
+    {
+      "id": "portfolio-06",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg",
+      "alt_en": "Refined beauty result by Microluxe Studio",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 6",
+      "caption_en": "Polished, effortless finish",
+      "caption_es": "Portfolio Microluxe Studio · 06"
+    },
+    {
+      "id": "portfolio-07",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg",
+      "alt_en": "Powder brows client result by Microluxe Studio",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 7",
+      "caption_en": "Powder brows client result",
+      "caption_es": "Portfolio Microluxe Studio · 07"
+    },
+    {
+      "id": "portfolio-08",
+      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg?size=100x100",
+      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg",
+      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg",
+      "alt_en": "Verified client portfolio result by Microluxe Studio",
+      "alt_es": "Resultado del portfolio de Microluxe Studio 8",
+      "caption_en": "Verified client portfolio result",
+      "caption_es": "Portfolio Microluxe Studio · 08"
+    }
+  ]
+}

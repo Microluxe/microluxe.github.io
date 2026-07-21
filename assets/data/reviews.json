@@ -1,0 +1,82 @@
+{
+  "aggregate": {
+    "rating": 4.9,
+    "count": 45,
+    "distribution": {"5": 44, "4": 0, "3": 0, "2": 1, "1": 0}
+  },
+  "synced_at": null,
+  "source": "Booksy fallback summaries",
+  "reviews": [
+    {
+      "name": "Viviana",
+      "date": "2026-01-04",
+      "rating": 5,
+      "service": "40% off Powderbrows",
+      "staff": "Neyle Cabello",
+      "text": "Neyle made a nervous client feel comfortable, worked carefully with challenging brows and checked that she loved the result.",
+      "is_summary": true
+    },
+    {
+      "name": "Rut",
+      "date": "2025-12-12",
+      "rating": 5,
+      "service": "Powderbrows",
+      "staff": "Neyle Cabello",
+      "text": "A great powder-brow appointment and a very positive experience.",
+      "is_summary": true
+    },
+    {
+      "name": "Fernanda",
+      "date": "2025-12-06",
+      "rating": 5,
+      "service": "Brow lamination deluxe",
+      "staff": "Neyle Cabello",
+      "text": "Very pleased with the brow-lamination result.",
+      "is_summary": true
+    },
+    {
+      "name": "Guest",
+      "date": "2025-12-02",
+      "rating": 5,
+      "service": "Lash lift",
+      "text": "Happy with the lash lift and especially appreciative of the kind service.",
+      "is_summary": true
+    },
+    {
+      "name": "Daira",
+      "date": "2025-10-31",
+      "rating": 5,
+      "text": "Neyle was warm, explained the process clearly and earned an enthusiastic recommendation.",
+      "is_summary": true
+    },
+    {
+      "name": "Donna",
+      "date": "2025-10-14",
+      "rating": 5,
+      "service": "Lash tint and lift",
+      "text": "The technician worked thoughtfully with very short lashes and created an experience worth returning for.",
+      "is_summary": true
+    },
+    {
+      "name": "Ashley",
+      "date": "2025-10-02",
+      "rating": 5,
+      "text": "Professional, beautiful work in a clean and welcoming studio.",
+      "is_summary": true
+    },
+    {
+      "name": "Aminatou",
+      "date": "2025-09-19",
+      "rating": 5,
+      "text": "A sweet, professional service and an experience the client loved from start to finish.",
+      "is_summary": true
+    },
+    {
+      "name": "Vicmar",
+      "date": "2025-08-15",
+      "rating": 5,
+      "text": "Loved both the result and Neyle’s positive attitude, with a strong recommendation for the studio.",
+      "is_summary": true
+    }
+  ]
+}

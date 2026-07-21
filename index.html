@@ -9,8 +9,6 @@
   <meta property="og:title" content="Microluxe Studio | Kissimmee">
   <meta property="og:description" content="Brows, lashes, permanent makeup, advanced facials and professional training.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/microluxe-logo.png">
-  <link rel="icon" type="image/png" href="assets/images/microluxe-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
@@ -23,7 +21,9 @@
   <header class="site-header" id="top">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="Microluxe Studio home">
-        <img class="brand-logo" src="assets/images/microluxe-logo.png" alt="Microluxe Studio logo">
+        <span class="logo-shine header-logo-shine">
+          <img class="brand-logo" src="assets/images/microluxe-logo.png" alt="Microluxe Studio logo">
+        </span>
       </a>
 
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
@@ -61,17 +61,27 @@
         </dl>
       </div>
 
-      <div class="hero-visual reveal" aria-label="Microluxe Studio work">
-        <div class="hero-photo-frame">
-          <img class="hero-photo" referrerpolicy="no-referrer" decoding="async"
-            src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg"
-            data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg?size=640x0"
-            alt="Microluxe Studio beauty treatment result">
+      <div class="hero-visual reveal" aria-label="Microluxe Studio featured results">
+        <div class="hero-photo-frame" id="hero-showcase" aria-roledescription="carousel">
+          <div class="hero-photo-backdrop" aria-hidden="true"></div>
+          <div class="hero-photo-stack">
+            <img class="hero-photo is-active" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg?size=1280x0" alt="Microluxe Studio beauty result 1">
+            <img class="hero-photo" loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg?size=1280x0" alt="Microluxe Studio beauty result 2">
+            <img class="hero-photo" loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg?size=1280x0" alt="Microluxe Studio beauty result 3">
+            <img class="hero-photo" loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg?size=1280x0" alt="Microluxe Studio beauty result 4">
+            <img class="hero-photo" loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg?size=1280x0" alt="Microluxe Studio beauty result 5">
+            <img class="hero-photo" loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg?size=1280x0" alt="Microluxe Studio client result 6">
+          </div>
+          <div class="hero-photo-controls">
+            <button class="hero-photo-control hero-photo-prev" type="button" aria-label="Previous featured photo">←</button>
+            <div class="hero-photo-dots" aria-label="Choose featured photo"></div>
+            <button class="hero-photo-control hero-photo-next" type="button" aria-label="Next featured photo">→</button>
+          </div>
           <span class="image-label">Kissimmee · FL</span>
         </div>
         <div class="hero-brand-card">
-          <div class="logo-shine" aria-hidden="true">
-            <img src="assets/images/microluxe-logo.png" alt="">
+          <div class="logo-shine">
+            <img src="assets/images/microluxe-logo.png" alt="Microluxe Studio logo">
           </div>
           <p data-i18n="heroMediaLabel">Luxury beauty in Kissimmee</p>
         </div>
@@ -141,41 +151,62 @@
       <div class="section-heading reveal">
         <div><span class="section-index">III</span><p class="eyebrow" data-i18n="workEyebrow">Selected results</p></div>
         <h2 data-i18n="workTitle">Small details. Visible confidence.</h2>
-        <p data-i18n="workIntro">A selection of brow, lash and permanent makeup work from Microluxe Studio.</p>
+        <div class="portfolio-heading-copy">
+          <p data-i18n="workIntro">The complete portfolio selection of brow, lash and permanent makeup work from Microluxe Studio.</p>
+          <span class="portfolio-count-badge"><strong id="portfolio-total">18</strong> <span data-i18n="portfolioPhotosLabel">portfolio photos</span></span>
+        </div>
       </div>
 
       <div class="client-carousel reveal" id="client-carousel" aria-roledescription="carousel" aria-label="Microluxe Studio client results">
         <div class="carousel-viewport">
-          <div class="carousel-track">
+          <div class="carousel-track" id="portfolio-track" data-portfolio-fallback="true">
             <figure class="carousel-slide is-active">
-              <button class="carousel-image-button" type="button" data-lightbox-index="0" aria-label="Open client result 1">
-                <img loading="eager" decoding="async" referrerpolicy="no-referrer" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg?size=640x0"  alt="Natural brow result by Microluxe Studio">
+              <button class="carousel-image-button" type="button" data-lightbox-index="0" aria-label="Open Microluxe Studio portfolio image 1">
+                <img loading="eager" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/biz_photo/b9a9c2e81b114125b938d07b44d551-microluxe-studio-biz-photo-24990e59486c4ce48433cf9dc6b736-booksy.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/biz_photo/b9a9c2e81b114125b938d07b44d551-microluxe-studio-biz-photo-24990e59486c4ce48433cf9dc6b736-booksy.jpeg" alt="Microluxe Studio portfolio image">
               </button>
-              <figcaption data-i18n="carouselCaptionOne">Tailored brow definition</figcaption>
+              <figcaption data-i18n="carouselCaptionOne">Inside Microluxe Studio</figcaption>
             </figure>
             <figure class="carousel-slide">
-              <button class="carousel-image-button" type="button" data-lightbox-index="1" aria-label="Open client result 2">
-                <img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg?size=640x0"  alt="Brow styling result by Microluxe Studio">
+              <button class="carousel-image-button" type="button" data-lightbox-index="1" aria-label="Open Microluxe Studio portfolio image 2">
+                <img loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/7e6cb5112c294ee0931e0c7155546d-microluxe-studio-inspiration-f7e9ebc0c7174378900cf4130dc2d5-booksy.jpeg" alt="Microluxe Studio signature beauty result">
               </button>
-              <figcaption data-i18n="carouselCaptionTwo">Balanced shape and tone</figcaption>
+              <figcaption data-i18n="carouselCaptionTwo">Signature beauty result</figcaption>
             </figure>
             <figure class="carousel-slide">
-              <button class="carousel-image-button" type="button" data-lightbox-index="2" aria-label="Open client result 3">
-                <img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg?size=640x0"  alt="Permanent makeup result by Microluxe Studio">
+              <button class="carousel-image-button" type="button" data-lightbox-index="2" aria-label="Open Microluxe Studio portfolio image 3">
+                <img loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/3284ea0c99d94a8da56851c3023b99-microluxe-studio-inspiration-57c3ec3674604b2589b0d38fcf17d0-booksy.jpeg" alt="Natural beauty result by Microluxe Studio">
               </button>
-              <figcaption data-i18n="carouselCaptionThree">Soft permanent makeup</figcaption>
+              <figcaption data-i18n="carouselCaptionThree">Tailored brow definition</figcaption>
             </figure>
             <figure class="carousel-slide">
-              <button class="carousel-image-button" type="button" data-lightbox-index="3" aria-label="Open client result 4">
-                <img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg?size=640x0"  alt="Lash and brow result by Microluxe Studio">
+              <button class="carousel-image-button" type="button" data-lightbox-index="3" aria-label="Open Microluxe Studio portfolio image 4">
+                <img loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/0d56812772fe4a77855f6ccc9d698d-microluxe-studio-inspiration-59415c6128654a03bc3333959f9377-booksy.jpeg" alt="Beauty styling result by Microluxe Studio">
               </button>
-              <figcaption data-i18n="carouselCaptionFour">Polished, effortless finish</figcaption>
+              <figcaption data-i18n="carouselCaptionFour">Balanced shape and tone</figcaption>
             </figure>
             <figure class="carousel-slide">
-              <button class="carousel-image-button" type="button" data-lightbox-index="4" aria-label="Open client result 5">
-                <img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg?size=640x0"  alt="Powder brows client result">
+              <button class="carousel-image-button" type="button" data-lightbox-index="4" aria-label="Open Microluxe Studio portfolio image 5">
+                <img loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/6b39e22cc07544588b89224a390e9d-microluxe-studio-inspiration-916df76b9328456ab57935d23f0775-booksy.jpeg" alt="Permanent makeup result by Microluxe Studio">
               </button>
-              <figcaption data-i18n="carouselCaptionFive">Powder brows result</figcaption>
+              <figcaption data-i18n="carouselCaptionFive">Soft permanent makeup</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <button class="carousel-image-button" type="button" data-lightbox-index="5" aria-label="Open Microluxe Studio portfolio image 6">
+                <img loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/inspiration/e62d7a95546b4b578eb2e6327d8f70-microluxe-studio-inspiration-1d31ce5f92c043468b635079e6251d-booksy.jpeg" alt="Refined beauty result by Microluxe Studio">
+              </button>
+              <figcaption data-i18n="carouselCaptionSix">Polished, effortless finish</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <button class="carousel-image-button" type="button" data-lightbox-index="6" aria-label="Open Microluxe Studio portfolio image 7">
+                <img loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/380f7fe3854543f4be2df2cc9220effa.jpeg" alt="Powder brows client result by Microluxe Studio">
+              </button>
+              <figcaption data-i18n="carouselCaptionSeven">Powder brows client result</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <button class="carousel-image-button" type="button" data-lightbox-index="7" aria-label="Open Microluxe Studio portfolio image 8">
+                <img loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg?size=1280x0" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg?size=100x100" alt="Verified client portfolio result by Microluxe Studio">
+              </button>
+              <figcaption data-i18n="carouselCaptionEight">Verified client portfolio result</figcaption>
             </figure>
           </div>
         </div>
@@ -185,8 +216,9 @@
 
         <div class="carousel-meta">
           <p data-i18n="carouselHint">Hover to see the image breathe. Click to enlarge.</p>
+          <span class="portfolio-sync-note" id="portfolio-sync-note" aria-live="polite"></span>
           <div class="carousel-dots" aria-label="Choose client image"></div>
-          <span class="carousel-counter" aria-live="polite">01 / 05</span>
+          <span class="carousel-counter" aria-live="polite">01 / 08</span>
         </div>
       </div>
 
@@ -229,23 +261,22 @@
       <div class="section-heading reveal">
         <div><span class="section-index">VI</span><p class="eyebrow" data-i18n="reviewsEyebrow">Client notes</p></div>
         <h2 data-i18n="reviewsTitle">The experience matters as much as the result.</h2>
-        <p><strong>4.9 / 5</strong> · <span data-i18n="basedOn">Based on 45 Booksy reviews</span></p>
+        <p><strong>4.9 / 5</strong> · <span data-i18n="basedOn">Based on all 45 Booksy reviews</span></p>
       </div>
 
-      <div class="review-grid">
-        <blockquote class="review-card reveal">
-          <p data-i18n="reviewOne">“Knowledgeable and detail-oriented. She made sure I was happy with the results.”</p>
-          <footer>Viviana · Powder Brows</footer>
-        </blockquote>
-        <blockquote class="review-card reveal">
-          <p data-i18n="reviewTwo">“Beautiful and professional work, lovely and clean space.”</p>
-          <footer>Ashley</footer>
-        </blockquote>
-        <blockquote class="review-card reveal">
-          <p data-i18n="reviewThree">“She is so sweet and explains everything. I will recommend her.”</p>
-          <footer>Daira</footer>
-        </blockquote>
+      <div class="review-carousel reveal" id="review-carousel" aria-roledescription="carousel" aria-label="Microluxe Studio client reviews">
+        <div class="review-viewport">
+          <div class="review-track" id="review-track" aria-live="polite"></div>
+        </div>
+        <button class="review-control review-prev" type="button" aria-label="Previous review">←</button>
+        <button class="review-control review-next" type="button" aria-label="Next review">→</button>
+        <div class="review-carousel-meta">
+          <p data-i18n="reviewDisclosure">Five-star testimonials are featured here. The 4.9 score includes every Booksy review.</p>
+          <div class="review-dots" aria-label="Choose review"></div>
+          <span class="review-counter" aria-live="polite">01 / 01</span>
+        </div>
       </div>
+      <noscript><p class="review-noscript">Client reviews are available on Booksy.</p></noscript>
     </section>
 
     <section class="contact section-shell section-divider" id="contact">
@@ -300,23 +331,15 @@
 
             <label class="form-field">
               <span data-i18n="formDate">Preferred date</span>
-              <input id="preferred-date" type="text" name="Preferred date (MM/DD/YYYY)" inputmode="numeric" autocomplete="off" maxlength="10" pattern="(?:0[1-9]|1[0-2])/(?:0[1-9]|[12][0-9]|3[01])/[0-9]{4}" data-i18n-placeholder="formDatePlaceholder" placeholder="MM/DD/YYYY">
+              <input type="date" name="Preferred date">
             </label>
 
-            <div class="form-field form-field-wide service-picker">
-              <span data-i18n="formService">Services and prices</span>
-              <div class="service-fields" id="service-fields">
-                <div class="service-select-row">
-                  <select class="service-select" id="service-select" name="Service 1" required aria-label="Primary service">
-                    <option value="" data-i18n="formChooseService">Choose a service</option>
-                  </select>
-                </div>
-              </div>
-              <button class="add-service-button" id="add-service-button" type="button">
-                <span aria-hidden="true">＋</span><span data-i18n="formAddService">Add another service</span>
-              </button>
-              <p class="service-limit-note" id="service-limit-note" hidden data-i18n="formServiceLimit">You can add up to five services.</p>
-            </div>
+            <label class="form-field form-field-wide">
+              <span data-i18n="formService">Service and price</span>
+              <select id="service-select" name="Service and price" required>
+                <option value="" data-i18n="formChooseService">Choose a service</option>
+              </select>
+            </label>
 
             <label class="form-field">
               <span data-i18n="formContactMethod">Preferred reply</span>
@@ -343,7 +366,7 @@
   </main>
 
   <footer class="site-footer section-shell">
-    <a class="brand footer-brand" href="#top"><img class="brand-logo" src="assets/images/microluxe-logo.png" alt="Microluxe Studio logo"></a>
+    <a class="brand footer-brand" href="#top"><img class="brand-logo" src="assets/images/microluxe-logo.png" alt="Microluxe Studio logo"><span class="brand-name">Microluxe Studio</span></a>
     <p>Kissimmee, Florida</p>
     <p>© <span id="year"></span> Microluxe Studio</p>
   </footer>

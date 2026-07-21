@@ -75,14 +75,14 @@ const translations = {
     facials: "Facials", facialsText: "Hydrafacial, microneedling, Hollywood peel and combination treatments.",
     viewTreatments: "View treatments", selectedCategory: "Selected category", priceNotice: "Prices and availability may change. Booksy always shows the current information.",
     waxText: "Facial waxing and threading are also available.", fullMenu: "View full menu and current promotions",
-    workEyebrow: "Selected results", workTitle: "Small details. Visible confidence.", workIntro: "A selection of brow, lash and permanent makeup work from Microluxe Studio.",
-    carouselCaptionOne: "Tailored brow definition", carouselCaptionTwo: "Balanced shape and tone", carouselCaptionThree: "Soft permanent makeup", carouselCaptionFour: "Polished, effortless finish", carouselCaptionFive: "Powder brows result", carouselHint: "Hover to see the image breathe. Click to enlarge.",
+    workEyebrow: "Selected results", workTitle: "Small details. Visible confidence.", workIntro: "The complete portfolio selection of brow, lash and permanent makeup work from Microluxe Studio.", portfolioPhotosLabel: "portfolio photos", portfolioSynced: "Complete Booksy portfolio loaded", portfolioFallback: "Showing the available preview while the full Booksy portfolio synchronizes",
+    carouselCaptionOne: "Inside Microluxe Studio", carouselCaptionTwo: "Signature beauty result", carouselCaptionThree: "Tailored brow definition", carouselCaptionFour: "Balanced shape and tone", carouselCaptionFive: "Soft permanent makeup", carouselCaptionSix: "Polished, effortless finish", carouselCaptionSeven: "Powder brows client result", carouselCaptionEight: "Verified client portfolio result", carouselHint: "Hover to see the image breathe. Click to enlarge.",
     aboutEyebrow: "The studio", aboutTitle: "Professional technique. Personal attention.",
     aboutTextOne: "Led by beauty professional Neyle Cabello, Microluxe Studio combines technical precision with a calm, welcoming experience. Every appointment begins with listening: your preferences, your features and the result you want to achieve.",
     aboutTextTwo: "Clients consistently highlight the studio’s professionalism, detailed explanations, clean environment and thoughtful service.", readExperiences: "Read client experiences",
     trainingEyebrow: "Professional education", trainingTitle: "Hands-on training for beauty professionals.", trainingIntro: "Focused, one-day courses designed to build practical technique in permanent makeup, brows and lashes.", trainingAvailability: "Check training availability",
-    reviewsEyebrow: "Client notes", reviewsTitle: "The experience matters as much as the result.", basedOn: "Based on 45 Booksy reviews",
-    reviewOne: "“Knowledgeable and detail-oriented. She made sure I was happy with the results.”", reviewTwo: "“Beautiful and professional work, lovely and clean space.”", reviewThree: "“She is so sweet and explains everything. I will recommend her.”",
+    reviewsEyebrow: "Client notes", reviewsTitle: "The experience matters as much as the result.", basedOn: "Based on all 45 Booksy reviews",
+    reviewDisclosure: "Five-star testimonials are featured here. The 4.9 score includes every Booksy review.", verifiedClient: "Verified client", reviewSummary: "Client feedback summary", reviewService: "Service",
     contactEyebrow: "Contact & appointments", contactTitle: "Tell Neyle what you would like to book.", contactText: "Select a treatment and send your preferred date. Microluxe Studio will receive the request directly by email and contact you to confirm availability.", bookBooksy: "Or book directly through Booksy",
     locationLabel: "Location", emailLabel: "Email", bookingLabel: "Appointments", bookingText: "Requests are confirmed personally by the studio",
     formKicker: "Appointment request", formName: "Name", formNamePlaceholder: "Your full name", formEmail: "Email", formEmailPlaceholder: "you@email.com", formPhone: "Phone", formPhonePlaceholder: "Phone or WhatsApp", formContactRequired: "Please enter at least an email address or a phone number.", formContactValidation: "Enter an email address or a phone number so Neyle can contact you.", formDate: "Preferred date", formDatePlaceholder: "MM/DD/YYYY", formDateValidation: "Enter a valid date in MM/DD/YYYY format.", formService: "Services and prices", formChooseService: "Choose a service", formAddService: "Add another service", formRemoveService: "Remove service", formServiceLimit: "You can add up to five services.", formContactMethod: "Preferred reply", formReplyEmail: "Email", formReplyPhone: "Phone / WhatsApp", formMessage: "Message", formMessagePlaceholder: "Tell us what result you are looking for or ask any question", formPrivacy: "Your information is used only to respond to this appointment request.", formSubmit: "Send request", formSending: "Sending…", formSuccess: "Thank you. Your request has been sent to Neyle.", formError: "The message could not be sent. Please try again or email neylec@gmail.com.", selectService: "Select service"
@@ -103,14 +103,14 @@ const translations = {
     facials: "Faciales", facialsText: "Hydrafacial, microneedling, Hollywood peel y tratamientos combinados.",
     viewTreatments: "Ver tratamientos", selectedCategory: "Categoría seleccionada", priceNotice: "Los precios y la disponibilidad pueden cambiar. Booksy siempre muestra la información actual.",
     waxText: "También se ofrece depilación facial con cera e hilo.", fullMenu: "Ver carta completa y promociones actuales",
-    workEyebrow: "Resultados seleccionados", workTitle: "Pequeños detalles. Confianza visible.", workIntro: "Una selección de trabajos de cejas, pestañas y maquillaje permanente de Microluxe Studio.",
-    carouselCaptionOne: "Definición de cejas a medida", carouselCaptionTwo: "Forma y tono equilibrados", carouselCaptionThree: "Maquillaje permanente suave", carouselCaptionFour: "Acabado pulido y natural", carouselCaptionFive: "Resultado powder brows", carouselHint: "Pasa el ratón para ver respirar la imagen. Haz clic para ampliarla.",
+    workEyebrow: "Resultados seleccionados", workTitle: "Pequeños detalles. Confianza visible.", workIntro: "La selección completa del portfolio de cejas, pestañas y maquillaje permanente de Microluxe Studio.", portfolioPhotosLabel: "fotos de portfolio", portfolioSynced: "Portfolio completo de Booksy cargado", portfolioFallback: "Mostrando la selección disponible mientras se sincroniza el portfolio completo de Booksy",
+    carouselCaptionOne: "El universo Microluxe Studio", carouselCaptionTwo: "Resultado de belleza de autor", carouselCaptionThree: "Definición de cejas a medida", carouselCaptionFour: "Forma y tono equilibrados", carouselCaptionFive: "Maquillaje permanente suave", carouselCaptionSix: "Acabado pulido y natural", carouselCaptionSeven: "Resultado de powder brows", carouselCaptionEight: "Resultado verificado de una clienta", carouselHint: "Pasa el ratón para ver respirar la imagen. Haz clic para ampliarla.",
     aboutEyebrow: "El estudio", aboutTitle: "Técnica profesional. Atención personal.",
     aboutTextOne: "Dirigido por la profesional de belleza Neyle Cabello, Microluxe Studio combina precisión técnica con una experiencia tranquila y acogedora. Cada cita comienza escuchando tus preferencias, tus rasgos y el resultado que deseas conseguir.",
     aboutTextTwo: "Las clientas destacan de forma constante la profesionalidad, las explicaciones detalladas, la limpieza del espacio y el trato atento.", readExperiences: "Leer experiencias",
     trainingEyebrow: "Formación profesional", trainingTitle: "Cursos prácticos para profesionales de la belleza.", trainingIntro: "Formaciones intensivas de un día enfocadas en desarrollar técnica real en maquillaje permanente, cejas y pestañas.", trainingAvailability: "Consultar disponibilidad",
-    reviewsEyebrow: "Opiniones de clientas", reviewsTitle: "La experiencia importa tanto como el resultado.", basedOn: "Basado en 45 opiniones de Booksy",
-    reviewOne: "“Tiene mucho conocimiento y cuida cada detalle. Se aseguró de que estuviera satisfecha con el resultado.”", reviewTwo: "“Trabajo precioso y profesional, en un espacio agradable y limpio.”", reviewThree: "“Es muy amable y lo explica todo. La recomendaría.”",
+    reviewsEyebrow: "Opiniones de clientas", reviewsTitle: "La experiencia importa tanto como el resultado.", basedOn: "Basado en las 45 opiniones de Booksy",
+    reviewDisclosure: "Aquí se muestran testimonios de cinco estrellas. La puntuación de 4,9 incluye todas las reseñas de Booksy.", verifiedClient: "Cliente verificada", reviewSummary: "Resumen de la opinión", reviewService: "Servicio",
     contactEyebrow: "Contacto y citas", contactTitle: "Cuéntale a Neyle qué quieres reservar.", contactText: "Selecciona un tratamiento y envía tu fecha preferida. Microluxe Studio recibirá la solicitud directamente por correo y contactará contigo para confirmar disponibilidad.", bookBooksy: "O reserva directamente en Booksy",
     locationLabel: "Ubicación", emailLabel: "Correo", bookingLabel: "Citas", bookingText: "Las solicitudes se confirman personalmente desde el estudio",
     formKicker: "Solicitud de cita", formName: "Nombre", formNamePlaceholder: "Nombre y apellidos", formEmail: "Correo", formEmailPlaceholder: "tu@email.com", formPhone: "Teléfono", formPhonePlaceholder: "Teléfono o WhatsApp", formContactRequired: "Introduce al menos un correo electrónico o un teléfono.", formContactValidation: "Introduce un correo o un teléfono para que Neyle pueda contactarte.", formDate: "Fecha preferida", formDatePlaceholder: "MM/DD/AAAA", formDateValidation: "Introduce una fecha válida en formato MM/DD/AAAA.", formService: "Servicios y precios", formChooseService: "Elige un servicio", formAddService: "Agregar otro servicio", formRemoveService: "Eliminar servicio", formServiceLimit: "Puedes agregar hasta cinco servicios.", formContactMethod: "Respuesta preferida", formReplyEmail: "Correo", formReplyPhone: "Teléfono / WhatsApp", formMessage: "Mensaje", formMessagePlaceholder: "Cuéntanos qué resultado buscas o haz cualquier consulta", formPrivacy: "Tus datos solo se utilizarán para responder a esta solicitud de cita.", formSubmit: "Enviar solicitud", formSending: "Enviando…", formSuccess: "Gracias. Tu solicitud ha sido enviada a Neyle.", formError: "No se pudo enviar el mensaje. Inténtalo de nuevo o escribe a neylec@gmail.com.", selectService: "Seleccionar servicio"
@@ -122,6 +122,12 @@ let currentCategory = "permanent";
 let carouselIndex = 0;
 let carouselTimer;
 let lightboxIndex = 0;
+let portfolioImages = [];
+let heroIndex = 0;
+let heroTimer;
+let reviewIndex = 0;
+let reviewTimer;
+let reviewData = [];
 
 function getServiceValue(item) {
   return `${item.en} — ${item.price} — ${item.duration}`;
@@ -310,7 +316,15 @@ function applyLanguage(language) {
   renderTraining();
   renderServiceOptions(selectedServices);
   validateUSDate(false);
+  updatePortfolioLanguage();
   updateLightboxContent(lightboxIndex);
+  const portfolioNote = document.getElementById("portfolio-sync-note");
+  if (portfolioNote && portfolioImages.length) {
+    portfolioNote.textContent = portfolioImages.length >= 18
+      ? translations[language].portfolioSynced
+      : translations[language].portfolioFallback;
+  }
+  renderReviews();
 }
 
 function initNavigation() {
@@ -424,6 +438,91 @@ function initUSDateInput() {
   input.addEventListener("blur", () => validateUSDate(true));
 }
 
+
+function portfolioCaption(image, index) {
+  const key = currentLanguage === "es" ? "caption_es" : "caption_en";
+  return image[key] || (currentLanguage === "es"
+    ? `Portfolio Microluxe Studio · ${String(index + 1).padStart(2, "0")}`
+    : `Microluxe Studio portfolio · ${String(index + 1).padStart(2, "0")}`);
+}
+
+function portfolioAlt(image, index) {
+  const key = currentLanguage === "es" ? "alt_es" : "alt_en";
+  return image[key] || (currentLanguage === "es"
+    ? `Resultado del portfolio de Microluxe Studio ${index + 1}`
+    : `Microluxe Studio portfolio result ${index + 1}`);
+}
+
+function renderPortfolio(images) {
+  const track = document.getElementById("portfolio-track");
+  if (!track || !Array.isArray(images) || !images.length) return;
+  portfolioImages = images;
+  carouselIndex = 0;
+  lightboxIndex = 0;
+  track.dataset.portfolioFallback = "false";
+  track.innerHTML = images.map((image, index) => {
+    const src = image.src || image.source_url || "";
+    const fallback = image.fallback_src || image.source_url || src.split("?")[0];
+    const eager = index === 0 ? "eager" : "lazy";
+    return `
+      <figure class="carousel-slide${index === 0 ? " is-active" : ""}">
+        <button class="carousel-image-button" type="button" data-lightbox-index="${index}" aria-label="${currentLanguage === "es" ? "Abrir imagen" : "Open image"} ${index + 1}">
+          <img loading="${eager}" src="${src}" data-fallback-src="${fallback}" alt="${portfolioAlt(image, index).replaceAll('"', '&quot;')}">
+        </button>
+        <figcaption data-caption-index="${index}">${portfolioCaption(image, index)}</figcaption>
+      </figure>`;
+  }).join("");
+  const total = document.getElementById("portfolio-total");
+  if (total) total.textContent = String(images.length);
+}
+
+function updatePortfolioLanguage() {
+  if (!portfolioImages.length) return;
+  document.querySelectorAll("#portfolio-track .carousel-slide").forEach((slide, index) => {
+    const image = portfolioImages[index];
+    if (!image) return;
+    const img = slide.querySelector("img");
+    const caption = slide.querySelector("figcaption");
+    const button = slide.querySelector(".carousel-image-button");
+    if (img) img.alt = portfolioAlt(image, index);
+    if (caption) caption.textContent = portfolioCaption(image, index);
+    if (button) button.setAttribute("aria-label", `${currentLanguage === "es" ? "Abrir imagen" : "Open image"} ${index + 1}`);
+  });
+}
+
+async function loadPortfolio() {
+  const note = document.getElementById("portfolio-sync-note");
+  try {
+    const response = await fetch(`assets/data/portfolio.json?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Portfolio request failed: ${response.status}`);
+    const data = await response.json();
+    const images = Array.isArray(data.images) ? data.images.filter(item => item && (item.src || item.source_url)) : [];
+    if (!images.length) throw new Error("Portfolio data is empty");
+    renderPortfolio(images);
+    if (note) {
+      note.textContent = images.length >= 18
+        ? translations[currentLanguage].portfolioSynced
+        : translations[currentLanguage].portfolioFallback;
+      note.classList.toggle("is-complete", images.length >= 18);
+    }
+  } catch (error) {
+    console.warn("Using the embedded portfolio fallback.", error);
+    const fallbackSlides = [...document.querySelectorAll("#portfolio-track .carousel-slide")];
+    portfolioImages = fallbackSlides.map((slide, index) => ({
+      src: slide.querySelector("img")?.src || "",
+      fallback_src: slide.querySelector("img")?.dataset.fallbackSrc || "",
+      alt_en: slide.querySelector("img")?.alt || `Microluxe Studio portfolio result ${index + 1}`,
+      alt_es: `Resultado del portfolio de Microluxe Studio ${index + 1}`,
+      caption_en: slide.querySelector("figcaption")?.textContent || `Microluxe Studio portfolio · ${index + 1}`,
+      caption_es: `Portfolio Microluxe Studio · ${index + 1}`
+    }));
+    if (note) note.textContent = translations[currentLanguage].portfolioFallback;
+  }
+  initRemoteImages();
+  initCarousel();
+  initLightbox();
+}
+
 function initCarousel() {
   const carousel = document.getElementById("client-carousel");
   const track = carousel?.querySelector(".carousel-track");
@@ -431,6 +530,7 @@ function initCarousel() {
   const dotsContainer = carousel?.querySelector(".carousel-dots");
   const counter = carousel?.querySelector(".carousel-counter");
   if (!carousel || !track || !slides.length || !dotsContainer || !counter) return;
+  dotsContainer.innerHTML = "";
 
   slides.forEach((_, index) => {
     const dot = document.createElement("button");
@@ -549,6 +649,7 @@ function moveLightbox(direction) {
   const slides = getCarouselSlides();
   lightboxIndex = (lightboxIndex + direction + slides.length) % slides.length;
   updateLightboxContent(lightboxIndex);
+  renderReviews();
 }
 
 function initLightbox() {
@@ -566,6 +667,265 @@ function initLightbox() {
     if (event.key === "ArrowLeft") moveLightbox(-1);
     if (event.key === "ArrowRight") moveLightbox(1);
   });
+}
+
+
+function initHeroShowcase() {
+  const showcase = document.getElementById("hero-showcase");
+  const slides = [...(showcase?.querySelectorAll(".hero-photo") || [])];
+  const dotsContainer = showcase?.querySelector(".hero-photo-dots");
+  const backdrop = showcase?.querySelector(".hero-photo-backdrop");
+  if (!showcase || !slides.length || !dotsContainer) return;
+
+  slides.forEach((image, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "hero-photo-dot";
+    dot.setAttribute("aria-label", `Show featured photo ${index + 1}`);
+    dot.addEventListener("click", () => {
+      heroIndex = index;
+      updateHero();
+      restartHero();
+    });
+    dotsContainer.appendChild(dot);
+
+    image.addEventListener("error", () => image.classList.add("image-load-error"));
+  });
+
+  function updateHero() {
+    const availableSlides = slides.filter(image => !image.classList.contains("image-load-error"));
+    if (!availableSlides.length) return;
+    const activeImage = slides[heroIndex];
+    if (activeImage?.classList.contains("image-load-error")) {
+      heroIndex = (heroIndex + 1) % slides.length;
+      return updateHero();
+    }
+    slides.forEach((image, index) => {
+      image.classList.toggle("is-active", index === heroIndex);
+      image.setAttribute("aria-hidden", String(index !== heroIndex));
+    });
+    dotsContainer.querySelectorAll(".hero-photo-dot").forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === heroIndex);
+      dot.setAttribute("aria-current", index === heroIndex ? "true" : "false");
+    });
+    if (backdrop) backdrop.style.backgroundImage = `url("${activeImage.currentSrc || activeImage.src}")`;
+  }
+
+  function go(direction) {
+    heroIndex = (heroIndex + direction + slides.length) % slides.length;
+    updateHero();
+  }
+  function startHero() {
+    window.clearInterval(heroTimer);
+    heroTimer = window.setInterval(() => go(1), 4300);
+  }
+  function stopHero() { window.clearInterval(heroTimer); }
+  function restartHero() { stopHero(); startHero(); }
+
+  showcase.querySelector(".hero-photo-prev")?.addEventListener("click", () => { go(-1); restartHero(); });
+  showcase.querySelector(".hero-photo-next")?.addEventListener("click", () => { go(1); restartHero(); });
+  showcase.addEventListener("pointerenter", stopHero);
+  showcase.addEventListener("pointerleave", startHero);
+  showcase.addEventListener("focusin", stopHero);
+  showcase.addEventListener("focusout", startHero);
+
+  let touchStartX = 0;
+  showcase.addEventListener("touchstart", event => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+  showcase.addEventListener("touchend", event => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) > 42) { go(distance > 0 ? -1 : 1); restartHero(); }
+  }, { passive: true });
+
+  updateHero();
+  startHero();
+}
+
+function formatReviewDate(value) {
+  if (!value) return "";
+  const date = new Date(`${String(value).slice(0, 10)}T12:00:00`);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(date);
+}
+
+function normalizeReview(item) {
+  const user = item?.user || item?.customer || item?.client || {};
+  const appointment = item?.appointment || item?.booking || {};
+  const serviceObject = item?.service || appointment?.service || appointment?.services?.[0] || {};
+  const name = item?.name || item?.author || user?.first_name || user?.name || "Guest";
+  const text = item?.text || item?.review || item?.comment || item?.body || "";
+  let rating = Number(item?.rating ?? item?.score ?? item?.stars ?? 0);
+  if (!rating && (/kathleen/i.test(name) || /bait\s+and\s+switch/i.test(text))) rating = 2;
+  if (!rating) rating = 5;
+  return {
+    name,
+    text,
+    rating,
+    date: item?.date || item?.created_at || item?.createdAt || item?.reviewed_at || item?.appointment_date || appointment?.start_date || "",
+    service: typeof serviceObject === "string" ? serviceObject : (item?.service_name || serviceObject?.name || appointment?.service_name || ""),
+    staff: item?.staff || item?.staff_name || item?.staffer?.name || appointment?.staff_name || "",
+    confirmed: item?.confirmed ?? item?.is_confirmed ?? item?.verified ?? true,
+    is_summary: Boolean(item?.is_summary)
+  };
+}
+
+function getVisibleReviews() {
+  return reviewData
+    .map(normalizeReview)
+    .filter(review => review.text && review.rating >= 4 && !/bait\s+and\s+switch/i.test(review.text));
+}
+
+function renderReviews() {
+  const track = document.getElementById("review-track");
+  const carousel = document.getElementById("review-carousel");
+  const dotsContainer = carousel?.querySelector(".review-dots");
+  const counter = carousel?.querySelector(".review-counter");
+  if (!track || !carousel || !dotsContainer || !counter || !reviewData.length) return;
+
+  const reviews = getVisibleReviews();
+  if (!reviews.length) return;
+  reviewIndex = Math.min(reviewIndex, reviews.length - 1);
+  track.innerHTML = "";
+  dotsContainer.innerHTML = "";
+
+  reviews.forEach((review, index) => {
+    const slide = document.createElement("article");
+    slide.className = "review-slide";
+    slide.setAttribute("aria-hidden", String(index !== reviewIndex));
+
+    const card = document.createElement("blockquote");
+    card.className = "review-card";
+
+    const top = document.createElement("div");
+    top.className = "review-card-top";
+    const stars = document.createElement("span");
+    stars.className = "review-stars";
+    stars.setAttribute("aria-label", `${review.rating} out of 5 stars`);
+    stars.textContent = "★★★★★";
+    const badge = document.createElement("span");
+    badge.className = "review-badge";
+    badge.textContent = review.is_summary ? translations[currentLanguage].reviewSummary : translations[currentLanguage].verifiedClient;
+    top.append(stars, badge);
+
+    const quote = document.createElement("p");
+    quote.textContent = review.text;
+
+    const footer = document.createElement("footer");
+    const identity = document.createElement("div");
+    const name = document.createElement("strong");
+    name.textContent = review.name;
+    const date = document.createElement("span");
+    date.textContent = formatReviewDate(review.date);
+    identity.append(name, date);
+    footer.appendChild(identity);
+    if (review.service) {
+      const service = document.createElement("span");
+      service.className = "review-service";
+      service.textContent = `${translations[currentLanguage].reviewService}: ${review.service}`;
+      footer.appendChild(service);
+    }
+
+    card.append(top, quote, footer);
+    slide.appendChild(card);
+    track.appendChild(slide);
+
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "review-dot";
+    dot.setAttribute("aria-label", `Show review ${index + 1}`);
+    dot.addEventListener("click", () => { reviewIndex = index; updateReviews(); restartReviews(); });
+    dotsContainer.appendChild(dot);
+  });
+
+  updateReviews();
+}
+
+function updateReviews() {
+  const carousel = document.getElementById("review-carousel");
+  const track = document.getElementById("review-track");
+  const slides = [...(track?.querySelectorAll(".review-slide") || [])];
+  const dots = [...(carousel?.querySelectorAll(".review-dot") || [])];
+  const counter = carousel?.querySelector(".review-counter");
+  if (!track || !slides.length || !counter) return;
+  reviewIndex = (reviewIndex + slides.length) % slides.length;
+  track.style.transform = `translate3d(-${reviewIndex * 100}%, 0, 0)`;
+  slides.forEach((slide, index) => slide.setAttribute("aria-hidden", String(index !== reviewIndex)));
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("is-active", index === reviewIndex);
+    dot.setAttribute("aria-current", index === reviewIndex ? "true" : "false");
+  });
+  counter.textContent = `${String(reviewIndex + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+}
+
+function moveReviews(direction) {
+  const count = document.querySelectorAll(".review-slide").length;
+  if (!count) return;
+  reviewIndex = (reviewIndex + direction + count) % count;
+  updateReviews();
+}
+function startReviews() {
+  window.clearInterval(reviewTimer);
+  reviewTimer = window.setInterval(() => moveReviews(1), 6500);
+}
+function stopReviews() { window.clearInterval(reviewTimer); }
+function restartReviews() { stopReviews(); startReviews(); }
+
+function initReviewCarouselControls() {
+  const carousel = document.getElementById("review-carousel");
+  if (!carousel) return;
+  carousel.querySelector(".review-prev")?.addEventListener("click", () => { moveReviews(-1); restartReviews(); });
+  carousel.querySelector(".review-next")?.addEventListener("click", () => { moveReviews(1); restartReviews(); });
+  carousel.addEventListener("pointerenter", stopReviews);
+  carousel.addEventListener("pointerleave", startReviews);
+  carousel.addEventListener("focusin", stopReviews);
+  carousel.addEventListener("focusout", startReviews);
+  let touchStartX = 0;
+  carousel.addEventListener("touchstart", event => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+  carousel.addEventListener("touchend", event => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) > 42) { moveReviews(distance > 0 ? -1 : 1); restartReviews(); }
+  }, { passive: true });
+}
+
+async function fetchBooksyReviewsDirectly() {
+  const apiKey = "web-e3d812bf-d7a2-445d-ab38-55589ae6a121";
+  const reviews = [];
+  for (let page = 1; page <= 6; page += 1) {
+    const url = `https://booksy.com/api/en-us/2/customer_api/businesses/1311898/reviews?reviews_page=${page}&reviews_per_page=50`;
+    const response = await fetch(url, { headers: { "X-Api-Key": apiKey, Accept: "application/json" } });
+    if (!response.ok) throw new Error("Booksy review sync unavailable");
+    const payload = await response.json();
+    const items = payload?.reviews || payload?.data?.reviews || payload?.results || [];
+    if (!Array.isArray(items) || !items.length) break;
+    reviews.push(...items);
+    if (items.length < 50) break;
+  }
+  return reviews;
+}
+
+async function loadReviews() {
+  try {
+    const response = await fetch("assets/data/reviews.json", { cache: "no-store" });
+    if (response.ok) {
+      const payload = await response.json();
+      reviewData = Array.isArray(payload) ? payload : (payload.reviews || []);
+      renderReviews();
+      startReviews();
+    }
+  } catch (error) {
+    console.info("Local review data unavailable.");
+  }
+
+  try {
+    const liveReviews = await fetchBooksyReviewsDirectly();
+    if (liveReviews.length > reviewData.length) {
+      reviewData = liveReviews;
+      reviewIndex = 0;
+      renderReviews();
+      restartReviews();
+    }
+  } catch (error) {
+    // The local JSON remains the reliable fallback. GitHub Actions refreshes it after deployment.
+  }
 }
 
 function initContactForm() {
@@ -656,7 +1016,8 @@ applyLanguage(currentLanguage);
 initNavigation();
 initReveal();
 initUSDateInput();
-initRemoteImages();
-initCarousel();
-initLightbox();
+initHeroShowcase();
+loadPortfolio();
+initReviewCarouselControls();
+loadReviews();
 initContactForm();

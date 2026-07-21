@@ -6,14 +6,12 @@ Web bilingüe y responsive para Microluxe Studio, preparada para publicarse como
 
 - Diseño deluxe en tonos lila, beige, dorado champagne y ciruela.
 - Selector de idioma inglés / español.
-- Carrusel automático de trabajos con flechas, indicadores, gesto táctil y pausa al interactuar.
+- Carrusel automático con las 18 fotografías de **Show all photos → Portfolio** de Booksy, flechas, indicadores, gesto táctil y pausa al interactuar.
 - Animación suave al pasar el cursor sobre las fotografías.
 - Visor ampliado de imágenes con navegación anterior / siguiente.
 - Listado interactivo de servicios, precios y duración.
 - Selección automática del servicio en el formulario.
 - Formulario de contacto y solicitud de cita dirigido a `neylec@gmail.com`.
-- Fecha adaptada al formato estadounidense `MM/DD/YYYY`.
-- Botón para añadir hasta cinco servicios en una misma solicitud.
 - Validación obligatoria de nombre, servicio y al menos un dato de contacto: correo o teléfono.
 - Enlaces alternativos de reserva mediante Booksy.
 
@@ -49,12 +47,27 @@ El formulario exige:
 
 - `index.html`: estructura de la página y formulario.
 - `assets/css/styles.css`: diseño responsive y animaciones.
-- `assets/js/main.js`: traducciones, catálogo, carrusel, visor, fechas de EE. UU. y envío del formulario.
-- `assets/images/microluxe-logo.png`: logo PNG transparente utilizado en cabecera, hero y pie.
+- `assets/js/main.js`: traducciones, catálogo, carrusel, visor y envío del formulario.
+- `assets/data/portfolio.json`: manifiesto de fotografías utilizado por el carrusel.
+- `scripts/sync_booksy_portfolio.py`: obtiene las 18 imágenes del portfolio y las guarda dentro de la web.
+- `.github/workflows/sync-booksy-portfolio.yml`: sincroniza automáticamente el portfolio al subir la web y cada lunes.
 - `.nojekyll`: evita que GitHub Pages procese innecesariamente los archivos con Jekyll.
+
+## Sincronización de las 18 fotografías
+
+Booksy solo incluye unas pocas miniaturas en el HTML inicial. Las 18 imágenes completas aparecen después de abrir **Show all photos → Portfolio**. Por eso esta versión incluye una automatización específica:
+
+1. Sube todos los archivos a la rama `main`.
+2. GitHub ejecutará automáticamente **Actions → Sync Booksy portfolio**.
+3. La automatización abrirá la galería de Booksy, recuperará las 18 fotografías y las guardará en `assets/images/portfolio/`.
+4. Al terminar, hará un nuevo commit y GitHub Pages volverá a publicar la web automáticamente.
+
+La primera sincronización puede tardar unos minutos. Mientras se completa, la web utiliza la selección de respaldo incluida en el ZIP. También puedes iniciar la actualización manualmente desde **Actions → Sync Booksy portfolio → Run workflow**.
+
+Las imágenes quedan almacenadas dentro del propio repositorio para que el portfolio no dependa permanentemente de los enlaces externos de Booksy.
 
 ## Recomendaciones
 
-- Las fotografías actuales se cargan desde Booksy. Conviene sustituirlas por archivos originales dentro de `assets/images/` para evitar depender de enlaces externos.
+- Mantén activadas las acciones del repositorio para conservar el portfolio actualizado.
 - Confirma el nombre profesional, la dirección completa y los precios antes de publicar.
 - Los precios y duraciones se actualizan en `assets/js/main.js`.
