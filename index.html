@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Italiana&amp;display=swap" rel="stylesheet"/>
-<link href="assets/css/styles.css?v=20260721-portrait-layout" rel="stylesheet"/>
-<script defer="" src="assets/js/main.js?v=20260721-portrait-layout"></script>
+<link href="assets/css/styles.css?v=20260721-mobile-date-photo-fix" rel="stylesheet"/>
+<script defer="" src="assets/js/main.js?v=20260721-mobile-date-photo-fix"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -185,12 +185,6 @@
 </button>
 <figcaption data-i18n="carouselCaptionSeven">Powder brows client result</figcaption>
 </figure>
-<figure class="carousel-slide">
-<button aria-label="Open Microluxe Studio portfolio image 7" class="carousel-image-button" data-lightbox-index="6" type="button">
-<img alt="Verified client portfolio result by Microluxe Studio" data-fallback-src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg?size=100x100" loading="lazy" src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg?size=1280x0"/>
-</button>
-<figcaption data-i18n="carouselCaptionEight">Verified client portfolio result</figcaption>
-</figure>
 </div>
 </div><button aria-label="Next image" class="carousel-control carousel-next" type="button">→</button></div>
 
@@ -199,7 +193,7 @@
 <p data-i18n="carouselHint">Hover to see the image breathe. Click to enlarge.</p>
 <span aria-live="polite" class="portfolio-sync-note" id="portfolio-sync-note"></span>
 <div aria-label="Choose client image" class="carousel-dots"></div>
-<span aria-live="polite" class="carousel-counter">01 / 07</span>
+<span aria-live="polite" class="carousel-counter">01 / 06</span>
 </div>
 </div>
 <dialog aria-label="Expanded client image" class="lightbox" id="image-lightbox">
@@ -298,7 +292,7 @@
 <p class="form-contact-note form-field-wide" data-i18n="formContactRequired" id="contact-required-note">Please enter at least an email address or a phone number.</p>
 <label class="form-field">
 <span data-i18n="formDate">Preferred date</span>
-<input name="Preferred date" type="date"/>
+<input id="preferred-date" inputmode="numeric" maxlength="10" name="Preferred date" placeholder="MM/DD/YYYY" autocomplete="off" type="text" aria-label="Preferred date in MM/DD/YYYY format"/>
 </label>
 <label class="form-field form-field-wide">
 <span data-i18n="formService">Service and price</span>

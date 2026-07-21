@@ -496,10 +496,18 @@ async function loadPortfolio() {
     const response = await fetch(`assets/data/portfolio.json?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`Portfolio request failed: ${response.status}`);
     const data = await response.json();
+    const seenPortfolioImages = new Set();
     const images = Array.isArray(data.images) ? data.images.filter(item => {
       if (!item || !(item.src || item.source_url)) return false;
       const source = `${item.src || ""} ${item.source_url || ""} ${item.fallback_src || ""}`.toLowerCase();
-      return !source.includes("/biz_photo/") && !source.includes("microluxe-logo");
+      if (source.includes("/biz_photo/") || source.includes("microluxe-logo") || source.includes("size=100x100")) return false;
+
+      const identitySource = item.source_url || item.fallback_src || item.src || "";
+      let identity = identitySource.split("?")[0].replaceAll("\\", "/").toLowerCase();
+      identity = identity.split("/").pop() || identity;
+      if (!identity || seenPortfolioImages.has(identity)) return false;
+      seenPortfolioImages.add(identity);
+      return true;
     }) : [];
     if (!images.length) throw new Error("Portfolio data is empty");
     renderPortfolio(images);

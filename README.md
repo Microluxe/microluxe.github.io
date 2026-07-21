@@ -73,3 +73,10 @@ The image carousel includes all eight portfolio/studio images currently surfaced
 ## Portrait carousel layout update
 
 The portfolio carousel is optimized for vertical smartphone photos. On desktop it uses a centered 4:5 editorial frame with navigation outside the image. On mobile, the controls move below the image and the hero logo card no longer overlaps the featured photograph.
+
+
+## Latest fixes
+
+- Mobile-safe preferred date field using US format `MM/DD/YYYY`.
+- Removed the known blurry duplicate fallback photo.
+- Added duplicate and thumbnail filtering before the portfolio carousel renders.

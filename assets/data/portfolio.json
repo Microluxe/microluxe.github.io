@@ -1,9 +1,9 @@
 {
   "expected_count": 18,
-  "count": 7,
+  "count": 6,
   "synced_at": null,
   "source": "https://booksy.com/en-us/1311898_microluxe-studio_brows-lashes_134766_kissimmee",
-  "note": "Logo removed from fallback gallery. GitHub Actions replaces this fallback with the complete 18-photo Booksy Portfolio.",
+  "note": "Blurry duplicate thumbnail removed from the fallback gallery. GitHub Actions replaces this fallback with the complete 18-photo Booksy Portfolio.",
   "images": [
     {
       "id": "portfolio-01",
@@ -64,16 +64,6 @@
       "alt_es": "Resultado del portfolio de Microluxe Studio 7",
       "caption_en": "Powder brows client result",
       "caption_es": "Portfolio Microluxe Studio · 07"
-    },
-    {
-      "id": "portfolio-07",
-      "src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg?size=100x100",
-      "fallback_src": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg",
-      "source_url": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1311898/review_photos/9ff301b73e14459085032e18fc38dfbc.jpeg",
-      "alt_en": "Verified client portfolio result by Microluxe Studio",
-      "alt_es": "Resultado del portfolio de Microluxe Studio 8",
-      "caption_en": "Verified client portfolio result",
-      "caption_es": "Portfolio Microluxe Studio · 08"
     }
   ]
 }
