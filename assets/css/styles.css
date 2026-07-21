@@ -1430,3 +1430,242 @@ h3 { font-size: clamp(1.75rem, 2.65vw, 2.85rem); line-height: 1.03; }
   .carousel-dots { max-width: calc(100vw - 7rem); gap: .4rem; }
   .carousel-dot { flex: 0 0 auto; }
 }
+
+/* =========================================================
+   PORTRAIT PORTFOLIO LAYOUT — IPHONE / MOBILE PHOTO FORMAT
+   ========================================================= */
+
+/* On small screens the logo becomes a separate card, never an overlay. */
+@media (max-width: 680px) {
+  .hero-visual {
+    display: grid;
+    gap: .85rem;
+    padding: 0;
+  }
+
+  .hero-photo-frame {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+  }
+
+  .hero-brand-card {
+    position: relative;
+    inset: auto;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 94px minmax(0, 1fr);
+    align-items: center;
+    gap: .9rem;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: .8rem 1rem;
+    transform: none;
+    border-radius: 18px;
+    box-shadow: 0 14px 34px rgba(52,33,60,.10);
+  }
+
+  .hero-brand-card .logo-shine {
+    width: 94px;
+  }
+
+  .hero-brand-card .logo-shine img {
+    width: 94px;
+    max-height: 76px;
+  }
+
+  .hero-brand-card p {
+    margin: 0;
+    text-align: left;
+    font-size: .59rem;
+    line-height: 1.55;
+  }
+}
+
+/* The portfolio uses a centered portrait stage rather than a full-width banner. */
+.client-carousel {
+  width: min(100%, 1080px);
+  margin-inline: auto;
+}
+
+.portfolio-carousel-stage {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 820px) 52px;
+  grid-template-areas: "previous viewport next";
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.8rem, 2vw, 1.5rem);
+}
+
+.portfolio-carousel-stage > .carousel-prev { grid-area: previous; }
+.portfolio-carousel-stage > .carousel-viewport { grid-area: viewport; }
+.portfolio-carousel-stage > .carousel-next { grid-area: next; }
+
+.portfolio-carousel-stage .carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255,250,246,.82), transparent 30%),
+    linear-gradient(145deg, #dfcfe1 0%, #efe2d8 55%, #dccbd8 100%);
+  box-shadow: 0 30px 70px rgba(62,39,70,.14);
+}
+
+.portfolio-carousel-stage .carousel-slide {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 0;
+  padding: clamp(1rem, 2.4vw, 2rem);
+}
+
+.portfolio-carousel-stage .carousel-slide::before {
+  inset: -22px;
+  filter: blur(42px) saturate(.82);
+  opacity: .34;
+}
+
+.portfolio-carousel-stage .carousel-image-button {
+  position: relative;
+  width: min(100%, 610px);
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 4 / 5;
+  margin-inline: auto;
+  border: 1px solid rgba(255,255,255,.48);
+  border-radius: 22px;
+  background: rgba(255,250,246,.34);
+  box-shadow: 0 20px 48px rgba(52,33,60,.13);
+}
+
+.portfolio-carousel-stage .carousel-image-button img {
+  width: 100%;
+  height: 100%;
+  padding: clamp(.25rem, .6vw, .45rem);
+  object-fit: contain;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.portfolio-carousel-stage .carousel-slide figcaption {
+  position: relative;
+  inset: auto;
+  z-index: 3;
+  max-width: min(100%, 610px);
+  margin-top: .9rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--accent-dark);
+  backdrop-filter: none;
+  font-size: .68rem;
+  text-align: center;
+}
+
+.portfolio-carousel-stage .carousel-control {
+  position: relative;
+  inset: auto;
+  top: auto;
+  width: 52px;
+  height: 52px;
+  aspect-ratio: auto;
+  justify-self: center;
+  border-color: rgba(63,43,72,.14);
+  background: rgba(255,250,246,.88);
+  color: var(--ink);
+  box-shadow: 0 14px 32px rgba(52,33,60,.10);
+}
+
+.portfolio-carousel-stage .carousel-control:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.client-carousel .carousel-meta {
+  width: min(100%, 820px);
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .portfolio-carousel-stage {
+    grid-template-columns: 44px minmax(0, 680px) 44px;
+  }
+
+  .portfolio-carousel-stage .carousel-control {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 680px) {
+  .client-carousel {
+    width: 100%;
+  }
+
+  .portfolio-carousel-stage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "viewport viewport"
+      "previous next";
+    gap: .85rem 1rem;
+  }
+
+  .portfolio-carousel-stage .carousel-viewport {
+    border-radius: 22px;
+  }
+
+  .portfolio-carousel-stage .carousel-slide {
+    padding: .65rem .65rem .85rem;
+  }
+
+  .portfolio-carousel-stage .carousel-image-button {
+    width: 100%;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 4 / 5;
+    border-radius: 17px;
+  }
+
+  .portfolio-carousel-stage .carousel-image-button img {
+    padding: .18rem;
+    border-radius: 15px;
+  }
+
+  .portfolio-carousel-stage .carousel-slide figcaption {
+    margin-top: .75rem;
+    padding-inline: .5rem;
+    font-size: .61rem;
+    line-height: 1.45;
+  }
+
+  .portfolio-carousel-stage .carousel-control {
+    width: 46px;
+    height: 46px;
+  }
+
+  .portfolio-carousel-stage .carousel-prev { justify-self: end; }
+  .portfolio-carousel-stage .carousel-next { justify-self: start; }
+
+  .client-carousel .carousel-meta {
+    padding-top: .9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-brand-card {
+    grid-template-columns: 78px minmax(0,1fr);
+  }
+
+  .hero-brand-card .logo-shine,
+  .hero-brand-card .logo-shine img {
+    width: 78px;
+  }
+
+  .portfolio-carousel-stage .carousel-slide {
+    padding: .48rem .48rem .75rem;
+  }
+}

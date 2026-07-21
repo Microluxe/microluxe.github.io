@@ -69,3 +69,7 @@ The image carousel includes all eight portfolio/studio images currently surfaced
 - Failed remote images try an alternate Booksy image size before being skipped.
 - The business logo image is excluded from the lower portfolio gallery and from synchronized manifests.
 - CSS and JavaScript include a cache-busting version so GitHub Pages browsers load this correction immediately.
+
+## Portrait carousel layout update
+
+The portfolio carousel is optimized for vertical smartphone photos. On desktop it uses a centered 4:5 editorial frame with navigation outside the image. On mobile, the controls move below the image and the hero logo card no longer overlaps the featured photograph.
